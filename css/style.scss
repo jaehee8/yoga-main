@@ -1,0 +1,83 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//color
+$color-1 : #fff;
+$color-2 : #eee;
+$color-3 : #ccc;
+$color-4 : #767676;
+$color-5 : #484848;
+$color-6 : #333;
+$color-7 : #222;
+// width variable 
+$mobile-min-width : 320px;
+$tablet-min-width : 768px;
+$desktop-min-width : 1024px;
+$fullhd-min-width : 1920px;
+//mixin
+@mixin reponsive-media-query($min-width, $max-width) { 
+  @media (min-width:$min-width) and (max-width:$max-width) {
+    @content;
+  }
+}
+@mixin size($width, $height) { //size set
+  width: $width;
+  height: $height;
+}
+@mixin flex($justify, $align, $flex) { //flex set
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex;
+} 
+
+@include reponsive-media-query($desktop-min-width, $fullhd-min-width) {
+  #container {
+    @include size(100vw, 100vh);
+    & header {
+      @include size(100%, 10vh);
+      @include flex(center, center, row);
+      background-color: $color-3;
+      & > div {
+        @include size(80%, 100%);
+        border: 1px solid red;
+        @include flex(space-between, center, row);
+      }
+    }
+  }
+}
+
+@include reponsive-media-query($tablet-min-width, $desktop-min-width) {
+  #container {
+    @include size(100vw, 100vh);
+    & header {
+      @include size(100%, 8vh);
+      @include flex(center, center, row);
+      background-color: $color-3;
+      & > div {
+        @include size(85%, 100%);
+        border: 1px solid blue;
+        @include flex(space-between, center, row);
+      }
+    }
+  }
+}
+
+@include reponsive-media-query($mobile-min-width, $tablet-min-width) {
+  #container {
+    @include size(100vw, 100vh);
+    & header {
+      @include size(100%, 7vh);
+      @include flex(center, center, row);
+      background-color: $color-3;
+      & > div {
+        @include size(90%, 100%);
+        border: 1px solid violet;
+        @include flex(space-between, center, row);
+      }
+    }
+  }
+}
