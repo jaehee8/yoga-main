@@ -34,50 +34,85 @@ $fullhd-min-width : 1920px;
   flex-direction: $flex;
 } 
 
-@include reponsive-media-query($desktop-min-width, $fullhd-min-width) {
+// pc
+@include reponsive-media-query($tablet-min-width, $fullhd-min-width) {
   #container {
     @include size(100vw, 100vh);
     & header {
       @include size(100%, 10vh);
       @include flex(center, center, row);
-      background-color: $color-3;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      position: fixed;
+      top: 0;
+
       & > div {
-        @include size(80%, 100%);
+        @include size(72%, 100%);
         border: 1px solid red;
         @include flex(space-between, center, row);
       }
     }
-  }
-}
-
-@include reponsive-media-query($tablet-min-width, $desktop-min-width) {
-  #container {
-    @include size(100vw, 100vh);
-    & header {
-      @include size(100%, 8vh);
-      @include flex(center, center, row);
-      background-color: $color-3;
-      & > div {
-        @include size(85%, 100%);
-        border: 1px solid blue;
-        @include flex(space-between, center, row);
+    & main {
+      @include flex(center, center, column);
+      & section:nth-child(1) {
+        @include size(100vw, 85vh);
+        background-color: #fcf;
       }
+      & section:nth-child(2) {
+        @include size(72vw, 72vw);
+        background-color: #ffc;
+        margin-top: 10vh;
+      }
+      & section:nth-child(3) {
+        @include size(100%, 40vh);
+        background-color: #cfc;
+        margin-top: 10vh;
+      }
+    }
+    & footer {
+      @include size(100%, 30vh);
+      background-color: #ccc;
+      margin-top: 10vh;
     }
   }
 }
 
+// mobile
 @include reponsive-media-query($mobile-min-width, $tablet-min-width) {
   #container {
     @include size(100vw, 100vh);
     & header {
       @include size(100%, 7vh);
       @include flex(center, center, row);
-      background-color: $color-3;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      position: fixed;
+      top: 0;
       & > div {
         @include size(90%, 100%);
         border: 1px solid violet;
         @include flex(space-between, center, row);
       }
+    }
+    & main {
+      @include flex(center, center, column);
+      & section:nth-child(1) {
+        @include size(100vw, 85vh);
+        background-color: #fcc;
+      }
+      & section:nth-child(2) {
+        @include size(100%, 100vh);
+        background-color: #ffc;
+        margin-top: 10vh;
+      }
+      & section:nth-child(3) {
+        @include size(100%, 40vh);
+        background-color: #cfc;
+        margin-top: 10vh;
+      }
+    }
+    & footer {
+      @include size(100%, 30vh);
+      background-color: #ddd;
+      margin-top: 10vh;
     }
   }
 }
