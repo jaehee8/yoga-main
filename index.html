@@ -23,4 +23,19 @@
     <footer>footer</footer>
   </div>
 </body>
+
+<script>
+  const headbar = document.querySelector('header');
+  
+  window.addEventListener("wheel", function(event) {
+    console.log(window.scrollY);
+    if(window.scrollY > 400) {
+      console.dir(headbar);
+      headbar.style.background = '#ccc';
+    } else {
+      headbar.style.backgroundColor = 'transparent';
+    }
+    
+  });
+</script>
 </html>

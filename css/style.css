@@ -10,7 +10,7 @@
     height: 100vh;
   }
   #container header {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     top: 0;
   }
   #container header > div {
-    width: 72%;
+    width: 72vw;
     height: 100%;
     border: 1px solid red;
     display: flex;
@@ -47,13 +47,13 @@
     margin-top: 10vh;
   }
   #container main section:nth-child(3) {
-    width: 100%;
+    width: 100vw;
     height: 40vh;
     background-color: #cfc;
     margin-top: 10vh;
   }
   #container footer {
-    width: 100%;
+    width: 100vw;
     height: 30vh;
     background-color: #ccc;
     margin-top: 10vh;
@@ -65,7 +65,7 @@
     height: 100vh;
   }
   #container header {
-    width: 100%;
+    width: 100vw;
     height: 7vh;
     display: flex;
     justify-content: center;
