@@ -222,7 +222,7 @@ li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 30vh;
+    bottom: 20vh;
   }
   #container main section:nth-child(1) > div:nth-child(3) {
     width: 50vw;

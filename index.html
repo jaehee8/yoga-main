@@ -59,9 +59,9 @@
   const headbar = document.querySelector('header');
   
   window.addEventListener("wheel", function(event) {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if(window.scrollY > 400) {
-      console.dir(headbar);
+      // console.dir(headbar);
       headbar.style.background = 'rgba(0,0,0,.3)';
     } else {
       headbar.style.backgroundColor = 'transparent';

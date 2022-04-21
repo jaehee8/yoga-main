@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 a{
   display: block;
   text-decoration: none;
@@ -206,7 +207,7 @@ $fullhd-min-width : 1920px;
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          top: 30vh;
+          bottom: 20vh;
         }
         & > div:nth-child(3) {
           @include size(50vw, 10vh);
