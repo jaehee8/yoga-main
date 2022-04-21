@@ -11,12 +11,39 @@
   <div id="container">
     <header>
       <div>
-        <div>logo</div>
-        <div>menu</div>
+        <!-- logo -->
+        <div>
+          <a href="#"></a>
+        </div>
+        <!-- pc menu -->
+        <div>
+          <ul>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Class</a>
+            </li>
+            <li>
+              <a href="#">Notice</a>
+            </li>
+          </ul>
+          <ul>
+            <!-- icon -->
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <!-- mobile menu -->
+        <div></div>
       </div>
     </header>
     <main>
-      <section>1</section>
+      <section></section>
       <section>2</section>
       <section>3</section>
     </main>
@@ -31,7 +58,7 @@
     console.log(window.scrollY);
     if(window.scrollY > 400) {
       console.dir(headbar);
-      headbar.style.background = '#D2B8C5';
+      headbar.style.background = 'rgba(0,0,0,.3)';
     } else {
       headbar.style.backgroundColor = 'transparent';
     }

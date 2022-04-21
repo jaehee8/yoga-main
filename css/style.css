@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
 @media (min-width: 768px) and (max-width: 1920px) {
   #container {
     width: 100vw;
@@ -16,7 +26,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
   }
@@ -29,9 +38,50 @@
     align-items: center;
     flex-direction: row;
   }
-  #container header > div > div:nth-child(1) {
-    width: 170.6px;
-    height: 30px;
+  #container header > div > div:nth-child(1) > a {
+    width: 170px;
+    height: 28px;
+    background-image: url(../images/yoga-logo.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #container header > div > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container header > div > div:nth-child(2) > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container header > div > div:nth-child(2) > ul li a {
+    margin-right: 5vw;
+    color: #fff;
+  }
+  #container header > div > div:nth-child(2) > ul:nth-child(2) li a {
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+    margin-left: 3vw;
+  }
+  #container header > div > div:nth-child(2) > ul:nth-child(2) li:nth-child(1) a {
+    background-image: url(../images/icon/search.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #container header > div > div:nth-child(2) > ul:nth-child(2) li:nth-child(2) a {
+    background-image: url(../images/icon/mypage.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #container header > div > div:nth-child(3) {
+    display: none;
   }
   #container main {
     display: flex;
@@ -42,7 +92,10 @@
   #container main section:nth-child(1) {
     width: 100vw;
     height: 85vh;
-    background-color: #fcf;
+    background-image: url(../images/bg.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   #container main section:nth-child(2) {
     width: 72vw;
@@ -75,7 +128,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
   }
@@ -88,6 +140,26 @@
     align-items: center;
     flex-direction: row;
   }
+  #container header > div > div:nth-child(1) > a {
+    display: block;
+    width: 130px;
+    height: 23px;
+    background-image: url(../images/yoga-logo.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #container header > div > div:nth-child(2) {
+    display: none;
+  }
+  #container header > div > div:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon/menu.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   #container main {
     display: flex;
     justify-content: center;
@@ -97,7 +169,10 @@
   #container main section:nth-child(1) {
     width: 100vw;
     height: 85vh;
-    background-color: #fcc;
+    background-image: url(../images/bg-mobile.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   #container main section:nth-child(2) {
     width: 100%;
