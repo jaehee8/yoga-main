@@ -33,6 +33,12 @@ $fullhd-min-width : 1920px;
   align-items: $align;
   flex-direction: $flex;
 } 
+@mixin img($url) { //image set
+  background-image: $url;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 // pc
 @include reponsive-media-query($tablet-min-width, $fullhd-min-width) {
@@ -49,6 +55,10 @@ $fullhd-min-width : 1920px;
         @include size(72vw, 100%);
         border: 1px solid red;
         @include flex(space-between, center, row);
+        & > div:nth-child(1) { //logo
+          @include size(170.6px, 30px);
+          // @include img(url(../images/));
+        }
       }
     }
     & main {
