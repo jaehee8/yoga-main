@@ -70,9 +70,9 @@ $fullhd-min-width : 1920px;
             @include img(url(../images/yoga-logo.png));
           }
         }
-        & > div:nth-child(2) {
+        & > div:nth-child(2) { //pc버전 메뉴
           @include flex(center, center, row);
-          & > ul {
+          & > ul { //메뉴
             @include flex(space-around, center, row);
             & li {
               & a {
@@ -81,7 +81,7 @@ $fullhd-min-width : 1920px;
               }
             }
           }
-          & > ul:nth-child(2) {
+          & > ul:nth-child(2) { //서치, 마이페이지
             & li {
               & a {
                 @include size(24px, 24px);
@@ -101,7 +101,7 @@ $fullhd-min-width : 1920px;
             }
           }
         }
-        & > div:nth-child(3) {
+        & > div:nth-child(3) { //mobile 버전 메뉴
           display: none;
         }
       }
@@ -111,30 +111,40 @@ $fullhd-min-width : 1920px;
       & section:nth-child(1) {
         @include size(100vw, 85vh);
         @include img(url(../images/bg.png));
+        @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
-          @include size(80vh, 20vh);
-          border: 1px solid red;
-          position: absolute;
-          top: 15vh;
-          left: 50%;
-          transform: translate(-50%);
-          z-index: 1;
+          @include size(50vw, 40vw);
+          margin-top: 10vh;
+          border: 1px solid salmon;
+          position: relative;
+          @include flex(center, center, row);
+          & > div:nth-child(1) { //live online yoga
+            @include size(36vw, 8vw);
+            border: 1px solid red;
+            position: absolute;
+            bottom: 28vw;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 1;
+          }
+          & > div:nth-child(2) { //img
+            @include size(48vw, 32vw);
+            border: 1px solid blue;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 5vw;
+          }
+          
         }
-        & > div:nth-child(2) {
-          @include size(80vh, 50vh);
-          border: 1px solid blue;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 20vh;
-        }
-        & > div:nth-child(3) {
+
+        & > div:nth-child(2) { //btn
           @include size(16vw, 10vh);
           border: 1px solid red;
           position: absolute;
           bottom: 20vh;
-          right: 20vw;
+          right: 14vw;
         }
       }
       & section:nth-child(2) {
@@ -160,13 +170,15 @@ $fullhd-min-width : 1920px;
 @include reponsive-media-query($mobile-min-width, $tablet-min-width) {
   #container {
     @include size(100vw, 100vh);
+    border: 1px solid salmon;
+
     & header {
       @include size(100vw, 7vh);
       @include flex(center, center, row);
       position: fixed;
       top: 0;
       z-index: 2;
-      & > div {
+      & > div { //logo
         @include size(90%, 100%);
         border: 1px solid violet;
         @include flex(space-between, center, row);
@@ -177,10 +189,10 @@ $fullhd-min-width : 1920px;
             @include img(url(../images/yoga-logo.png));
           }
         }
-        & > div:nth-child(2) {
+        & > div:nth-child(2) { //pc버전메뉴
           display: none;
         }
-        & > div:nth-child(3) {
+        & > div:nth-child(3) { //mobile 버전 메뉴 -->햄버거아이콘
           @include size(30px, 30px);
           @include img(url(../images/icon/menu.png));
         }
@@ -188,39 +200,48 @@ $fullhd-min-width : 1920px;
     }
     & main {
       @include flex(center, center, column);
-      & section:nth-child(1) {
+      & section:nth-child(1) { 
         @include size(100vw, 85vh);
         @include img(url(../images/bg-mobile.png));
+        @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
-          @include size(90vw, 30vw);
+          @include size(90vw, 90vw);
+          border: 1px solid salmon;
+          position: relative;
+          @include flex(center, center, row);
+          & > div:nth-child(1) { //live online yoga
+            @include size(84vw, 20vw);
+            border: 1px solid red;
+            position: absolute;
+            bottom: 62vw;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 1;
+          }
+          & > div:nth-child(2) { //img
+            @include size(114vw, 82vw);
+            border: 1px solid blue;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+          }
+          
+        }
+
+        & > div:nth-child(2) { //btn
+          @include size(40vw, 16vw);
           border: 1px solid red;
           position: absolute;
-          top: 20vh;
-          left: 50%;
-          transform: translate(-50%);
-          z-index: 1;
-        }
-        & > div:nth-child(2) {
-          @include size(90vw, 70vw);
-          border: 1px solid blue;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: 20vh;
-        }
-        & > div:nth-child(3) {
-          @include size(50vw, 10vh);
-          border: 1px solid red;
-          position: absolute;
-          bottom: 8vh;
-          left: 50%;
-          transform: translateX(-50%);
+          bottom: 5vh;
+          right: 50%;
+          transform: translateX(50%);
         }
       }
       & section:nth-child(2) {
         @include size(100%, 100vh);
-        background-color: #ffc;
+        background-color: rgba(0,0,0,.2);
         margin-top: 10vh;
       }
       & section:nth-child(3) {
@@ -234,5 +255,20 @@ $fullhd-min-width : 1920px;
       background-color: #ddd;
       margin-top: 10vh;
     }
+  }
+}
+
+main {
+  & >section:nth-child(1) {
+    & > div:nth-child(1) { //text-->live online yoga
+      &> div:nth-child(1) {
+        @include img(url(../images/liveYoga.png));
+      }
+      & > div:nth-child(2) { //img 
+        @include img(url(../images/main-img3.png));
+      }
+    }
+
+
   }
 }

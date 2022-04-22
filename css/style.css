@@ -97,34 +97,49 @@ li {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     position: relative;
   }
   #container main section:nth-child(1) > div:nth-child(1) {
-    width: 80vh;
-    height: 20vh;
+    width: 50vw;
+    height: 40vw;
+    margin-top: 10vh;
+    border: 1px solid salmon;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+    width: 36vw;
+    height: 8vw;
     border: 1px solid red;
     position: absolute;
-    top: 15vh;
+    bottom: 28vw;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
   }
-  #container main section:nth-child(1) > div:nth-child(2) {
-    width: 80vh;
-    height: 50vh;
+  #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+    width: 48vw;
+    height: 32vw;
     border: 1px solid blue;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 20vh;
+    bottom: 5vw;
   }
-  #container main section:nth-child(1) > div:nth-child(3) {
+  #container main section:nth-child(1) > div:nth-child(2) {
     width: 16vw;
     height: 10vh;
     border: 1px solid red;
     position: absolute;
     bottom: 20vh;
-    right: 20vw;
+    right: 14vw;
   }
   #container main section:nth-child(2) {
     width: 72vw;
@@ -149,6 +164,7 @@ li {
   #container {
     width: 100vw;
     height: 100vh;
+    border: 1px solid salmon;
   }
   #container header {
     width: 100vw;
@@ -203,40 +219,54 @@ li {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     position: relative;
   }
   #container main section:nth-child(1) > div:nth-child(1) {
     width: 90vw;
-    height: 30vw;
+    height: 90vw;
+    border: 1px solid salmon;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+    width: 84vw;
+    height: 20vw;
     border: 1px solid red;
     position: absolute;
-    top: 20vh;
+    bottom: 62vw;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
   }
-  #container main section:nth-child(1) > div:nth-child(2) {
-    width: 90vw;
-    height: 70vw;
+  #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+    width: 114vw;
+    height: 82vw;
     border: 1px solid blue;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20vh;
+    bottom: 0;
   }
-  #container main section:nth-child(1) > div:nth-child(3) {
-    width: 50vw;
-    height: 10vh;
+  #container main section:nth-child(1) > div:nth-child(2) {
+    width: 40vw;
+    height: 16vw;
     border: 1px solid red;
     position: absolute;
-    bottom: 8vh;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 5vh;
+    right: 50%;
+    transform: translateX(50%);
   }
   #container main section:nth-child(2) {
     width: 100%;
     height: 100vh;
-    background-color: #ffc;
+    background-color: rgba(0, 0, 0, 0.2);
     margin-top: 10vh;
   }
   #container main section:nth-child(3) {
@@ -251,4 +281,16 @@ li {
     background-color: #ddd;
     margin-top: 10vh;
   }
+}
+main > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  background-image: url(../images/liveYoga.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main > section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+  background-image: url(../images/main-img3.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
