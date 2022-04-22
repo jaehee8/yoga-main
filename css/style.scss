@@ -139,7 +139,7 @@ $fullhd-min-width : 1920px;
           
         }
 
-        & > div:nth-child(2) { //btn
+        & > div:nth-child(2) { //btn:참가하기
           @include size(16vw, 10vh);
           border: 1px solid red;
           position: absolute;
@@ -230,7 +230,7 @@ $fullhd-min-width : 1920px;
           
         }
 
-        & > div:nth-child(2) { //btn
+        & > div:nth-child(2) { //btn:참가하기
           @include size(40vw, 16vw);
           border: 1px solid red;
           position: absolute;
