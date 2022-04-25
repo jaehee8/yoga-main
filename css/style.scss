@@ -110,7 +110,7 @@ $fullhd-min-width : 1920px;
       @include flex(center, center, column);
       & section:nth-child(1) {
         @include size(100vw, 85vh);
-        @include img(url(../images/test.png));
+        @include img(url(../images/bg.png));
         @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
@@ -149,11 +149,41 @@ $fullhd-min-width : 1920px;
         }
 
         & > div:nth-child(2) { //btn:참가하기
-          @include size(16vw, 10vh);
+          @include size(24vh, 8vh);
           border: 1px solid red;
           position: absolute;
           bottom: 20vh;
           right: 14vw;
+          @include flex(space-between, center, row);
+          & span {
+            color: $color-1;
+          }
+          & > div { //arrow
+            @include size(4vw, 4vw);
+            background-color: #C196C1;
+            border-radius: 50%;
+            position: relative;
+            & > div:nth-child(1) {
+              @include size(6vw, 1vw);
+              @include img(url(../images/icon/arrow.png));
+              position: absolute;
+              right: 2vw;
+              bottom: 2vw;
+            }
+          }
+
+          & > div::after {
+            content: '';
+            display: block;
+            @include size(4.8vw, 4.8vw);
+            border: 2px solid #C196C1;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+          }
         }
       }
       & section:nth-child(2) {
@@ -211,7 +241,7 @@ $fullhd-min-width : 1920px;
       @include flex(center, center, column);
       & section:nth-child(1) { 
         @include size(100vw, 85vh);
-        @include img(url(../images/test2.png));
+        @include img(url(../images/bg-mo.png));
         @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
