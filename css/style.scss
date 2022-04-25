@@ -110,7 +110,7 @@ $fullhd-min-width : 1920px;
       @include flex(center, center, column);
       & section:nth-child(1) {
         @include size(100vw, 85vh);
-        @include img(url(../images/bg.png));
+        @include img(url(../images/test.png));
         @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
@@ -128,7 +128,16 @@ $fullhd-min-width : 1920px;
             transform: translate(-50%);
             z-index: 1;
           }
-          & > div:nth-child(2) { //img
+          & > div:nth-child(2) { //yogaimg1
+            @include size(48vw, 32vw);
+            border: 1px solid blue;
+            position: absolute;
+            left: 30%;
+            transform: translateX(-50%);
+            bottom: 8vw;
+            
+          }
+          & > div:nth-child(3) { //yogaimg2
             @include size(48vw, 32vw);
             border: 1px solid blue;
             position: absolute;
@@ -202,7 +211,7 @@ $fullhd-min-width : 1920px;
       @include flex(center, center, column);
       & section:nth-child(1) { 
         @include size(100vw, 85vh);
-        @include img(url(../images/bg-mobile.png));
+        @include img(url(../images/test2.png));
         @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
@@ -219,11 +228,19 @@ $fullhd-min-width : 1920px;
             transform: translate(-50%);
             z-index: 1;
           }
-          & > div:nth-child(2) { //img
+          & > div:nth-child(2) { //yogaimg1
             @include size(114vw, 82vw);
             border: 1px solid blue;
             position: absolute;
-            left: 50%;
+            left: 42%;
+            transform: translateX(-50%);
+            bottom: 7vw;
+          }
+          & > div:nth-child(3) { //yogaimg2
+            @include size(114vw, 82vw);
+            border: 1px solid blue;
+            position: absolute;
+            left: 55%;
             transform: translateX(-50%);
             bottom: 0;
           }
@@ -266,6 +283,9 @@ main {
       }
       & > div:nth-child(2) { //img 
         @include img(url(../images/main-img3.png));
+      }
+      & > div:nth-child(3) { //img 
+        @include img(url(../images/testimg.png));
       }
     }
 
