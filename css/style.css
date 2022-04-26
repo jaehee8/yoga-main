@@ -33,7 +33,6 @@ li {
   #container header > div {
     width: 72vw;
     height: 100%;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +106,6 @@ li {
     width: 50vw;
     height: 40vw;
     margin-top: 10vh;
-    border: 1px solid salmon;
     position: relative;
     display: flex;
     justify-content: center;
@@ -117,7 +115,6 @@ li {
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
     width: 36vw;
     height: 8vw;
-    border: 1px solid red;
     position: absolute;
     bottom: 28vw;
     left: 50%;
@@ -127,7 +124,6 @@ li {
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
     width: 48vw;
     height: 32vw;
-    border: 1px solid blue;
     position: absolute;
     left: 30%;
     transform: translateX(-50%);
@@ -136,21 +132,19 @@ li {
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
     width: 48vw;
     height: 32vw;
-    border: 1px solid blue;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 5vw;
   }
   #container main section:nth-child(1) > div:nth-child(2) {
-    width: 24vh;
+    width: 26vh;
     height: 8vh;
-    border: 1px solid red;
     position: absolute;
-    bottom: 20vh;
-    right: 14vw;
+    bottom: 30vh;
+    right: 20vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     flex-direction: row;
   }
@@ -158,31 +152,40 @@ li {
     color: #fff;
   }
   #container main section:nth-child(1) > div:nth-child(2) > div {
-    width: 4vw;
-    height: 4vw;
-    background-color: #C196C1;
-    border-radius: 50%;
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     position: relative;
+    margin-left: 5vh;
   }
   #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) {
-    width: 6vw;
-    height: 1vw;
+    width: 9vh;
+    height: 1.6vh;
     background-image: url(../images/icon/arrow.png);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    right: 2vw;
-    bottom: 2vw;
+    right: 3.5vh;
+    bottom: 3.5vh;
+    z-index: 1;
   }
-  #container main section:nth-child(1) > div:nth-child(2) > div::after {
-    content: "";
-    display: block;
-    width: 4.8vw;
-    height: 4.8vw;
-    border: 2px solid #C196C1;
-    box-sizing: border-box;
+  #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > a {
+    width: 6vh;
+    height: 6vh;
     border-radius: 50%;
+    background-color: #C196C1;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > a::after {
+    content: "";
+    width: 7vh;
+    height: 7vh;
+    border: 1px solid #C196C1;
+    border-radius: 50%;
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -191,8 +194,23 @@ li {
   #container main section:nth-child(2) {
     width: 72vw;
     height: 72vw;
-    background-color: #ffc;
     margin-top: 10vh;
+  }
+  #container main section:nth-child(2) > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container main section:nth-child(2) > ul > li {
+    width: 24vw;
+    height: 24vw;
+    border: 1px solid red;
+  }
+  #container main section:nth-child(2) > ul > li > a {
+    width: 24vw;
+    height: 24vw;
+    border: 1px solid skyblue;
   }
   #container main section:nth-child(3) {
     width: 100vw;
@@ -311,13 +329,61 @@ li {
     bottom: 0;
   }
   #container main section:nth-child(1) > div:nth-child(2) {
-    width: 40vw;
+    width: 50vw;
     height: 16vw;
     border: 1px solid red;
     position: absolute;
     bottom: 5vh;
     right: 50%;
     transform: translateX(50%);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) span {
+    color: #fff;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) > div {
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid #fff;
+    position: relative;
+    margin-left: 5vh;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) {
+    width: 9vh;
+    height: 1.6vh;
+    background-image: url(../images/icon/arrow.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 3.5vh;
+    bottom: 3.5vh;
+    z-index: 1;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > a {
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: #C196C1;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > a::after {
+    content: "";
+    width: 7vh;
+    height: 7vh;
+    border: 1px solid #C196C1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   #container main section:nth-child(2) {
     width: 100%;
@@ -345,13 +411,32 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
   background-repeat: no-repeat;
 }
 main > section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
-  background-image: url(../images/main-img3.png);
+  background-image: url(../images/main-img2.png);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
-  background-image: url(../images/testimg.png);
+  background-image: url(../images/mainimg.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#teacher > li:nth-child(1) > a {
+  background-image: url(../images/manyoga.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#teacher > li:nth-child(2) {
+  background-image: url(../images/yogamat.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#teacher > li:nth-child(3) > a {
+  background-image: url(../images/teacher.png);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;

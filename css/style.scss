@@ -10,9 +10,9 @@ a{
   text-decoration: none;
   color: #333;
 }
+
 li {
   list-style: none;
-
 }
 //color
 $color-1 : #fff;
@@ -62,7 +62,7 @@ $fullhd-min-width : 1920px;
       z-index: 2;
       & > div {
         @include size(72vw, 100%);
-        border: 1px solid red;
+        // border: 1px solid red;
         @include flex(space-between, center, row);
         & > div:nth-child(1) { //logo
           & > a {
@@ -116,12 +116,12 @@ $fullhd-min-width : 1920px;
         & > div:nth-child(1) {
           @include size(50vw, 40vw);
           margin-top: 10vh;
-          border: 1px solid salmon;
+          // border: 1px solid salmon;
           position: relative;
           @include flex(center, center, row);
           & > div:nth-child(1) { //live online yoga
             @include size(36vw, 8vw);
-            border: 1px solid red;
+            // border: 1px solid red;
             position: absolute;
             bottom: 28vw;
             left: 50%;
@@ -130,7 +130,7 @@ $fullhd-min-width : 1920px;
           }
           & > div:nth-child(2) { //yogaimg1
             @include size(48vw, 32vw);
-            border: 1px solid blue;
+            // border: 1px solid blue;
             position: absolute;
             left: 30%;
             transform: translateX(-50%);
@@ -139,7 +139,7 @@ $fullhd-min-width : 1920px;
           }
           & > div:nth-child(3) { //yogaimg2
             @include size(48vw, 32vw);
-            border: 1px solid blue;
+            // border: 1px solid blue;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -149,47 +149,66 @@ $fullhd-min-width : 1920px;
         }
 
         & > div:nth-child(2) { //btn:참가하기
-          @include size(24vh, 8vh);
-          border: 1px solid red;
+          @include size(26vh, 8vh);
+          // border: 1px solid red;
           position: absolute;
-          bottom: 20vh;
-          right: 14vw;
-          @include flex(space-between, center, row);
+          bottom: 30vh;
+          right: 20vw;
+          @include flex(end, center, row);
           & span {
             color: $color-1;
           }
-          & > div { //arrow
-            @include size(4vw, 4vw);
-            background-color: #C196C1;
-            border-radius: 50%;
+          & > div { 
+            @include size(8vh, 8vh);
+            @include flex( center, center, row);
+            // border: 1px solid #fff;
             position: relative;
-            & > div:nth-child(1) {
-              @include size(6vw, 1vw);
+            margin-left: 5vh;
+
+            & > div:nth-child(1) { //arrow
+              @include size(9vh, 1.6vh);
               @include img(url(../images/icon/arrow.png));
               position: absolute;
-              right: 2vw;
-              bottom: 2vw;
+              right: 3.5vh;
+              bottom: 3.5vh;
+              z-index: 1;
             }
-          }
-
-          & > div::after {
-            content: '';
-            display: block;
-            @include size(4.8vw, 4.8vw);
-            border: 2px solid #C196C1;
-            box-sizing: border-box;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+            & > div:nth-child(2) { //btn:참가하기
+              & > a {
+                @include size(6vh, 6vh);
+                border-radius: 50%;
+                background-color: #C196C1;
+              }
+              & > a::after {
+                content: '';
+                @include size(7vh, 7vh);
+                border: 1px solid #C196C1;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
+            }
           }
         }
       }
+      // section2 : live online yoga 소개 
       & section:nth-child(2) {
         @include size(72vw, 72vw);
-        background-color: #ffc;
         margin-top: 10vh;
+        & > ul { 
+          @include flex(center, center, row);
+          & > li {
+            @include size(24vw, 24vw);
+            border: 1px solid red;
+            & > a {
+              @include size(24vw, 24vw);
+              border: 1px solid skyblue;
+            }
+          }
+        }
       }
       & section:nth-child(3) {
         @include size(100vw, 40vh);
@@ -278,12 +297,50 @@ $fullhd-min-width : 1920px;
         }
 
         & > div:nth-child(2) { //btn:참가하기
-          @include size(40vw, 16vw);
+          @include size(50vw, 16vw);
           border: 1px solid red;
           position: absolute;
           bottom: 5vh;
           right: 50%;
           transform: translateX(50%);
+          @include flex(end, center, row);
+          & span {
+            color: $color-1;
+          }
+          & > div { 
+            @include size(8vh, 8vh);
+            @include flex( center, center, row);
+            border: 1px solid #fff;
+            position: relative;
+            margin-left: 5vh;
+
+            & > div:nth-child(1) { //arrow
+              @include size(9vh, 1.6vh);
+              @include img(url(../images/icon/arrow.png));
+              position: absolute;
+              right: 3.5vh;
+              bottom: 3.5vh;
+              z-index: 1;
+            }
+            & > div:nth-child(2) { //btn:참가하기
+              & > a {
+                @include size(6vh, 6vh);
+                border-radius: 50%;
+                background-color: #C196C1;
+              }
+              & > a::after {
+                content: '';
+                @include size(7vh, 7vh);
+                border: 1px solid #C196C1;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
+            }
+          }
         }
       }
       & section:nth-child(2) {
@@ -312,13 +369,27 @@ main {
         @include img(url(../images/liveYoga.png));
       }
       & > div:nth-child(2) { //img 
-        @include img(url(../images/main-img3.png));
+        @include img(url(../images/main-img2.png));
       }
       & > div:nth-child(3) { //img 
-        @include img(url(../images/testimg.png));
+        @include img(url(../images/mainimg.png));
       }
     }
+  }
+}
 
-
+#teacher {
+  & >li:nth-child(1) {
+    & > a {
+      @include img(url(../images/manyoga.png));
+    }
+  }
+  & >li:nth-child(2) {
+    @include img(url(../images/yogamat.png));
+  }
+  & >li:nth-child(3) {
+    & > a {
+      @include img(url(../images/teacher.png));
+    }
   }
 }
