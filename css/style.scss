@@ -404,7 +404,7 @@ main {
   }
 }
 
-#teacher {
+#teacher { //teacher
   & >li:nth-child(1) {
     & > a {
       @include img(url(../images/manyoga.png));
@@ -416,6 +416,40 @@ main {
   & >li:nth-child(3) {
     & > a {
       @include img(url(../images/teacher.png));
+    }
+  }
+}
+#on-class {
+  & >li:nth-child(1) {
+    & > a {
+      @include img(url(../images/zoomImg.png));
+    }
+  }
+  & >li:nth-child(2) {
+    @include flex(center, center, row);
+    & p {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+  }
+  & >li:nth-child(3) {
+    & > a {
+      @include img(url(../images/zoomyoga1.png));
+    }
+  }
+}
+#interview {
+  & >li:nth-child(1) {
+    & > a {
+      @include img(url(../images/interview2.png));
+    }
+  }
+  & >li:nth-child(2) {
+    @include img(url(../images/incense2.png));
+  }
+  & >li:nth-child(3) {
+    & > a {
+      @include img(url(../images/interview1.png));
     }
   }
 }

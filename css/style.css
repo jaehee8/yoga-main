@@ -473,4 +473,46 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#on-class > li:nth-child(1) > a {
+  background-image: url(../images/zoomImg.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#on-class > li:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#on-class > li:nth-child(2) p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+#on-class > li:nth-child(3) > a {
+  background-image: url(../images/zoomyoga1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#interview > li:nth-child(1) > a {
+  background-image: url(../images/interview2.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#interview > li:nth-child(2) {
+  background-image: url(../images/incense2.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#interview > li:nth-child(3) > a {
+  background-image: url(../images/interview1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
