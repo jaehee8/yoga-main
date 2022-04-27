@@ -272,7 +272,7 @@ h2 {
   #container header > div > div:nth-child(2) {
     display: none;
   }
-  #container header > div > div:nth-child(3) {
+  #container header > div > div:nth-child(3) #menu {
     width: 30px;
     height: 30px;
     background-image: url(../images/icon/menu.png);

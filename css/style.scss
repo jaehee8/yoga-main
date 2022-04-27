@@ -211,7 +211,7 @@ $fullhd-min-width : 1920px;
             @include size(24vw, 24vw);
             // border: 1px solid red;
             overflow: hidden;
-            & > a {
+            & > a { //img
               @include size(24vw, 24vw);
               transition: .3s;
               // border: 1px solid skyblue;
@@ -264,9 +264,13 @@ $fullhd-min-width : 1920px;
         & > div:nth-child(2) { //pc버전메뉴
           display: none;
         }
-        & > div:nth-child(3) { //mobile 버전 메뉴 -->햄버거아이콘
-          @include size(30px, 30px);
-          @include img(url(../images/icon/menu.png));
+        //mobile 버전 메뉴 -->햄버거아이콘
+        & > div:nth-child(3) { 
+          #menu {
+            @include size(30px, 30px);
+            @include img(url(../images/icon/menu.png));
+          }
+          
         }
       }
     }
