@@ -14,6 +14,10 @@ a{
 li {
   list-style: none;
 }
+h2 {
+  font-size: inherit;
+  font-weight: normal;
+}
 //color
 $color-1 : #fff;
 $color-2 : #eee;
@@ -198,6 +202,9 @@ $fullhd-min-width : 1920px;
       & section:nth-child(2) {
         @include size(72vw, 72vw);
         margin-top: 10vh;
+        & h2 {
+          display: none;
+        }
         & > ul { 
           @include flex(center, center, row);
           & > li {
@@ -261,6 +268,7 @@ $fullhd-min-width : 1920px;
       & section:nth-child(1) { 
         @include size(100vw, 85vh);
         @include img(url(../images/bg-mo.png));
+        background-position:50% 100%; 
         @include flex(center, center, row);
         position: relative;
         & > div:nth-child(1) {
@@ -344,9 +352,27 @@ $fullhd-min-width : 1920px;
         }
       }
       & section:nth-child(2) {
-        @include size(100%, 100vh);
-        background-color: rgba(0,0,0,.2);
-        margin-top: 10vh;
+        @include size(100%, min-content);
+        // background-color: rgba(0,0,0,.2);
+        & h2 {
+          text-align: center;
+          margin: 3vh 0;
+          text-transform: uppercase;
+        }
+        & > ul { 
+          @include flex(center, center, row);
+          & > li {
+            @include size(50vw, 50vw);
+            border: 1px solid red;
+            & > a {
+              @include size(50vw, 50vw);
+              border: 1px solid skyblue;
+            }
+          }
+          & > li:nth-child(2) {
+            display: none;
+          }
+        }
       }
       & section:nth-child(3) {
         @include size(100%, 40vh);
