@@ -426,11 +426,12 @@ main {
     }
   }
   & >li:nth-child(2) {
-    @include flex(center, center, row);
-    & p {
-      text-transform: uppercase;
-      font-size: 1.5rem;
-    }
+    @include img(url(../images/onyoga-text.png));
+    // @include flex(center, center, row);
+    // & p {
+    //   text-transform: uppercase;
+    //   font-size: 1.5rem;
+    // }
   }
   & >li:nth-child(3) {
     & > a {

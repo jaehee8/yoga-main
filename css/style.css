@@ -482,14 +482,10 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   background-repeat: no-repeat;
 }
 #on-class > li:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-#on-class > li:nth-child(2) p {
-  text-transform: uppercase;
-  font-size: 1.5rem;
+  background-image: url(../images/onyoga-text.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #on-class > li:nth-child(3) > a {
   background-image: url(../images/zoomyoga1.png);
