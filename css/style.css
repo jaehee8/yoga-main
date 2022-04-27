@@ -213,12 +213,15 @@ h2 {
   #container main section:nth-child(2) > ul > li {
     width: 24vw;
     height: 24vw;
-    border: 1px solid red;
+    overflow: hidden;
   }
   #container main section:nth-child(2) > ul > li > a {
     width: 24vw;
     height: 24vw;
-    border: 1px solid skyblue;
+    transition: 0.3s;
+  }
+  #container main section:nth-child(2) > ul > li:hover > a {
+    transform: scale(1.05);
   }
   #container main section:nth-child(3) {
     width: 100vw;
@@ -237,7 +240,6 @@ h2 {
   #container {
     width: 100vw;
     height: 100vh;
-    border: 1px solid salmon;
   }
   #container header {
     width: 100vw;
@@ -253,7 +255,6 @@ h2 {
   #container header > div {
     width: 90%;
     height: 100%;
-    border: 1px solid violet;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -302,7 +303,6 @@ h2 {
   #container main section:nth-child(1) > div:nth-child(1) {
     width: 90vw;
     height: 90vw;
-    border: 1px solid salmon;
     position: relative;
     display: flex;
     justify-content: center;
@@ -312,7 +312,6 @@ h2 {
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
     width: 84vw;
     height: 20vw;
-    border: 1px solid red;
     position: absolute;
     bottom: 62vw;
     left: 50%;
@@ -322,7 +321,6 @@ h2 {
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
     width: 114vw;
     height: 82vw;
-    border: 1px solid blue;
     position: absolute;
     left: 42%;
     transform: translateX(-50%);
@@ -331,7 +329,6 @@ h2 {
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
     width: 114vw;
     height: 82vw;
-    border: 1px solid blue;
     position: absolute;
     left: 55%;
     transform: translateX(-50%);
@@ -340,7 +337,6 @@ h2 {
   #container main section:nth-child(1) > div:nth-child(2) {
     width: 50vw;
     height: 16vw;
-    border: 1px solid red;
     position: absolute;
     bottom: 5vh;
     right: 50%;
@@ -360,7 +356,6 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    border: 1px solid #fff;
     position: relative;
     margin-left: 5vh;
   }
@@ -414,12 +409,10 @@ h2 {
   #container main section:nth-child(2) > ul > li {
     width: 50vw;
     height: 50vw;
-    border: 1px solid red;
   }
   #container main section:nth-child(2) > ul > li > a {
     width: 50vw;
     height: 50vw;
-    border: 1px solid skyblue;
   }
   #container main section:nth-child(2) > ul > li:nth-child(2) {
     display: none;

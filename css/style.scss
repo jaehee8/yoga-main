@@ -198,7 +198,7 @@ $fullhd-min-width : 1920px;
           }
         }
       }
-      // section2 : live online yoga 소개 
+      // section2 : 요가온 강사 클래스 인터뷰 이미지 
       & section:nth-child(2) {
         @include size(72vw, 72vw);
         margin-top: 10vh;
@@ -209,10 +209,17 @@ $fullhd-min-width : 1920px;
           @include flex(center, center, row);
           & > li {
             @include size(24vw, 24vw);
-            border: 1px solid red;
+            // border: 1px solid red;
+            overflow: hidden;
             & > a {
               @include size(24vw, 24vw);
-              border: 1px solid skyblue;
+              transition: .3s;
+              // border: 1px solid skyblue;
+            }
+          }
+          & >li:hover {
+            & > a {
+              transform: scale(1.05);
             }
           }
         }
@@ -235,7 +242,7 @@ $fullhd-min-width : 1920px;
 @include reponsive-media-query($mobile-min-width, $tablet-min-width) {
   #container {
     @include size(100vw, 100vh);
-    border: 1px solid salmon;
+    // border: 1px solid salmon;
 
     & header {
       @include size(100vw, 7vh);
@@ -245,7 +252,7 @@ $fullhd-min-width : 1920px;
       z-index: 2;
       & > div { //logo
         @include size(90%, 100%);
-        border: 1px solid violet;
+        // border: 1px solid violet;
         @include flex(space-between, center, row);
         & > div:nth-child(1) { //logo
           & > a {
@@ -273,12 +280,12 @@ $fullhd-min-width : 1920px;
         position: relative;
         & > div:nth-child(1) {
           @include size(90vw, 90vw);
-          border: 1px solid salmon;
+          // border: 1px solid salmon;
           position: relative;
           @include flex(center, center, row);
           & > div:nth-child(1) { //live online yoga
             @include size(84vw, 20vw);
-            border: 1px solid red;
+            // border: 1px solid red;
             position: absolute;
             bottom: 62vw;
             left: 50%;
@@ -287,7 +294,7 @@ $fullhd-min-width : 1920px;
           }
           & > div:nth-child(2) { //yogaimg1
             @include size(114vw, 82vw);
-            border: 1px solid blue;
+            // border: 1px solid blue;
             position: absolute;
             left: 42%;
             transform: translateX(-50%);
@@ -295,7 +302,7 @@ $fullhd-min-width : 1920px;
           }
           & > div:nth-child(3) { //yogaimg2
             @include size(114vw, 82vw);
-            border: 1px solid blue;
+            // border: 1px solid blue;
             position: absolute;
             left: 55%;
             transform: translateX(-50%);
@@ -306,7 +313,7 @@ $fullhd-min-width : 1920px;
 
         & > div:nth-child(2) { //btn:참가하기
           @include size(50vw, 16vw);
-          border: 1px solid red;
+          // border: 1px solid red;
           position: absolute;
           bottom: 5vh;
           right: 50%;
@@ -318,7 +325,7 @@ $fullhd-min-width : 1920px;
           & > div { 
             @include size(8vh, 8vh);
             @include flex( center, center, row);
-            border: 1px solid #fff;
+            // border: 1px solid #fff;
             position: relative;
             margin-left: 5vh;
 
@@ -351,6 +358,7 @@ $fullhd-min-width : 1920px;
           }
         }
       }
+      //section2 : 요가온 강사 클래스 인터뷰 이미지 
       & section:nth-child(2) {
         @include size(100%, min-content);
         // background-color: rgba(0,0,0,.2);
@@ -363,13 +371,13 @@ $fullhd-min-width : 1920px;
           @include flex(center, center, row);
           & > li {
             @include size(50vw, 50vw);
-            border: 1px solid red;
+            // border: 1px solid red;
             & > a {
               @include size(50vw, 50vw);
-              border: 1px solid skyblue;
+              // border: 1px solid skyblue;
             }
           }
-          & > li:nth-child(2) {
+          & > li:nth-child(2) { //pc에서 보이던 가운데 이미지
             display: none;
           }
         }
