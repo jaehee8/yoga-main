@@ -449,6 +449,24 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   background-repeat: no-repeat;
 }
 
+#on {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#on #off {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 2vh;
+  right: 5vw;
+  border: 1px solid #fff;
+}
+
 #teacher > li:nth-child(1) > a {
   background-image: url(../images/manyoga.png);
   background-position: 50% 50%;

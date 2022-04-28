@@ -270,7 +270,7 @@ $fullhd-min-width : 1920px;
             @include size(30px, 30px);
             @include img(url(../images/icon/menu.png));
           }
-          
+
         }
       }
     }
@@ -416,6 +416,25 @@ main {
   }
 }
 
+#on {
+  @include size(100vw, 100vh);
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  #off {
+    @include size(40px, 40px);
+    position: absolute;
+    top: 2vh;
+    right: 5vw;
+    border: 1px solid #fff;
+  }
+}
+
+
+
+//이미지 
 #teacher { //teacher
   & >li:nth-child(1) {
     & > a {
