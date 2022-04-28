@@ -9,10 +9,24 @@
 </head>
 <body>
   <div id="on">
-    <div id="off">
-      <div></div>
-      <div></div>
-    </div>
+    <div id="off"></div>
+    <ul>
+      <li>
+        <a href="#">about yogaon</a>
+      </li>
+      <li>
+        <a href="#">teacher</a>
+      </li>
+      <li>
+        <a href="#">class</a>
+      </li>
+      <li>
+        <a href="#">notice</a>
+      </li>
+      <li>
+        <a href="#">my page</a>
+      </li>
+    </ul>
   </div>
   <div id="container">
     <header>
@@ -127,10 +141,28 @@
     // console.log(window.scrollY);
     if(window.scrollY > 400) {
       // console.dir(headbar);
-      headbar.style.background = 'rgba(0,0,0,.3)';
+      headbar.style.background = 'rgba(0,0,0,.5)';
     } else {
       headbar.style.backgroundColor = 'transparent';
     }
   });
+
+  // 햄버거메뉴창 만들기
+  const btnMenu = document.querySelector('#menu');
+  const on = document.querySelector('#on');
+  const off = document.querySelector('#off');
+
+  btnMenu.addEventListener('click',() => {
+    console.log('메뉴클릭');
+    console.dir(on);
+    on.style.left = '0';
+
+  });
+  off.addEventListener('click',() => {
+    console.log('off클릭');
+    on.style.left = '100%';
+  });
+
+
 </script>
 </html>

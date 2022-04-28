@@ -251,7 +251,7 @@ $fullhd-min-width : 1920px;
       top: 0;
       z-index: 2;
       & > div { //logo
-        @include size(90%, 100%);
+        @include size(90vw, 100vh);
         // border: 1px solid violet;
         @include flex(space-between, center, row);
         & > div:nth-child(1) { //logo
@@ -364,7 +364,7 @@ $fullhd-min-width : 1920px;
       }
       //section2 : 요가온 강사 클래스 인터뷰 이미지 
       & section:nth-child(2) {
-        @include size(100%, min-content);
+        @include size(100vw, min-content);
         // background-color: rgba(0,0,0,.2);
         & h2 {
           text-align: center;
@@ -387,13 +387,13 @@ $fullhd-min-width : 1920px;
         }
       }
       & section:nth-child(3) {
-        @include size(100%, 40vh);
+        @include size(100vw, 40vh);
         background-color: #cfc;
         margin-top: 10vh;
       }
     }
     & footer {
-      @include size(100%, 30vh);
+      @include size(100vw, 30vh);
       background-color: #ddd;
       margin-top: 10vh;
     }
@@ -421,14 +421,29 @@ main {
   background-color: rgba(0,0,0,.8);
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   z-index: 3;
+  transition: .3s;
   #off {
     @include size(40px, 40px);
     position: absolute;
     top: 2vh;
-    right: 5vw;
-    border: 1px solid #fff;
+    right: 5%;
+    // border: 1px solid #fff;
+    @include img(url(../images/icon/off.png));
+  }
+  & > ul {
+    margin-top: 7vh;
+    & > li {
+      & >a {
+        @include size(100vw, 12vh);
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        line-height: 12vh;
+        padding-left: 5vh;
+      }
+
+    }
   }
 }
 
