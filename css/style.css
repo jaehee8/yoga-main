@@ -225,9 +225,35 @@ h2 {
   }
   #container main section:nth-child(3) {
     width: 100vw;
-    height: 40vh;
-    background-color: #cfc;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     margin-top: 10vh;
+  }
+  #container main section:nth-child(3) h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10vh 0;
+    text-transform: uppercase;
+  }
+  #container main section:nth-child(3) ul {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container main section:nth-child(3) ul li {
+    width: 36vh;
+    height: 36vh;
+    border: 1px solid #ddd;
+    border-radius: 2vh;
+    margin-left: 2vh;
   }
   #container footer {
     width: 100vw;
@@ -319,18 +345,18 @@ h2 {
     z-index: 1;
   }
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
-    width: 114vw;
+    width: 110vw;
     height: 82vw;
     position: absolute;
-    left: 42%;
+    left: 40%;
     transform: translateX(-50%);
     bottom: 7vw;
   }
   #container main section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
-    width: 114vw;
+    width: 110vw;
     height: 82vw;
     position: absolute;
-    left: 55%;
+    left: 54%;
     transform: translateX(-50%);
     bottom: 0;
   }
@@ -420,8 +446,31 @@ h2 {
   #container main section:nth-child(3) {
     width: 100vw;
     height: 40vh;
-    background-color: #cfc;
-    margin-top: 10vh;
+    margin-top: 5vh;
+  }
+  #container main section:nth-child(3) h2 {
+    text-align: center;
+    margin: 3vh 0;
+    text-transform: uppercase;
+  }
+  #container main section:nth-child(3) ul {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  #container main section:nth-child(3) ul li {
+    width: 60vw;
+    height: 60vw;
+    border: 1px solid #ddd;
+    border-radius: 2vw;
+    margin-left: 2vw;
   }
   #container footer {
     width: 100vw;
