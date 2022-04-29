@@ -130,16 +130,19 @@
       <!-- 3 -->
       <section>
         <h2>member's story</h2>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-        </ul>
+        <div id="slideshow">
+          <ul id="slides">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+          </ul>
+        </div>
+
       </section>
     </main>
     <footer>footer</footer>
@@ -173,6 +176,50 @@
     console.log('off클릭');
     on.style.left = '100%';
   });
+
+
+  //section-3 : member's story 
+  //무한 슬라이드쇼 만들기
+  const slides = document.querySelector( '#slides');
+  const slideItems = document.querySelectorAll( '#slides li');
+
+  
+  slideCount = slideItems.length;
+  slideWidth = 230; //슬라이드아이템 넓이
+  slideMargin = 10; //슬라이드끼리 마진값
+  makeClone(); //처음아이템 복사함수
+  initfunction(); //슬라이드 넓이와 위치값 초기화 함수
+
+  function makeClone() {
+    let cloneSlide = slideItems[0].cloneNode(true);
+    slides.append(cloneSlide);
+  }
+  function initfunction() { //ul의 넓이값 li한개값만큼 늘려주기
+    slides.style.width = (slideWidth + slideMargin) * (slideCount + 1) +'px';
+    // slides.style.left = - (slideWidth + slideMargin) + 'px';
+  }
+  
+  function move() {
+    let current = 0;
+    setInterval(function(){
+      console.log(current);
+      slides.style.transition = '0.2s';
+      slides.style.left = (slideWidth + slideMargin) + 'px';
+      current++;
+      if(current === slideCount) {
+        setTimeout(function(){
+          slides.style.transition = '0s';
+          slides.style.left = 0;
+        },200)
+        current = 0;
+      }
+    },1000);
+  }
+  //??ㅠㅠㅠㅠㅠㅠ
+  // move();
+
+
+
 
 
 </script>

@@ -228,6 +228,7 @@ h2 {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+    overflow: hidden;
     margin-top: 10vh;
   }
   #container main section:nth-child(3) h2 {
@@ -236,7 +237,12 @@ h2 {
     margin: 10vh 0;
     text-transform: uppercase;
   }
-  #container main section:nth-child(3) ul {
+  #container main section:nth-child(3) > div {
+    width: 100%;
+    height: 230px;
+    position: relative;
+  }
+  #container main section:nth-child(3) > div ul {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
@@ -247,13 +253,15 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    position: absolute;
+    left: 0;
   }
-  #container main section:nth-child(3) ul li {
-    width: 36vh;
-    height: 36vh;
+  #container main section:nth-child(3) > div ul li {
+    width: 230px;
+    height: 230px;
     border: 1px solid #ddd;
-    border-radius: 2vh;
-    margin-left: 2vh;
+    border-radius: 10px;
+    margin-left: 10px;
   }
   #container footer {
     width: 100vw;
@@ -447,13 +455,15 @@ h2 {
     width: 100vw;
     height: 40vh;
     margin-top: 5vh;
+    overflow: hidden;
+    position: relative;
   }
   #container main section:nth-child(3) h2 {
     text-align: center;
     margin: 3vh 0;
     text-transform: uppercase;
   }
-  #container main section:nth-child(3) ul {
+  #container main section:nth-child(3) > div ul {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
@@ -464,13 +474,15 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    position: absolute;
+    left: 0;
   }
-  #container main section:nth-child(3) ul li {
-    width: 60vw;
-    height: 60vw;
+  #container main section:nth-child(3) > div ul li {
+    width: 230px;
+    height: 230px;
     border: 1px solid #ddd;
-    border-radius: 2vw;
-    margin-left: 2vw;
+    border-radius: 10px;
+    margin-left: 10px;
   }
   #container footer {
     width: 100vw;
