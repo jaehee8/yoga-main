@@ -145,7 +145,25 @@
 
       </section>
     </main>
-    <footer>footer</footer>
+    <footer>
+      <div>
+        <div>
+          <div></div>
+          <ul>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <div></div>
+      </div>
+    </footer>
   </div>
 </body>
 
@@ -209,7 +227,7 @@
     setInterval(function(){
       console.log(current);
       if(current <= slideCount) {
-        slides.style.transition = '1s';
+        slides.style.transition = '1.8s';
         slides.style.left = -((slideWidth + slideMargin) *(current))+ 'px';
       }
       
@@ -217,14 +235,14 @@
         setTimeout(function(){
           slides.style.transition = '0s';
           slides.style.left = 0;
-        },1000)
+        },1800)
         current = -1;
       }
       current += 1;
-    },1200);
+    },2000);
   }
-  //??ㅠㅠㅠㅠㅠㅠ
-  move();
+  
+  // move();
 
 
 
