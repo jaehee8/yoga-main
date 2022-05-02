@@ -228,7 +228,6 @@ h2 {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    overflow: hidden;
     margin-top: 10vh;
   }
   #container main section:nth-child(3) h2 {
@@ -250,7 +249,7 @@ h2 {
     height: -moz-min-content;
     height: min-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     position: absolute;

@@ -227,7 +227,7 @@ $fullhd-min-width : 1920px;
       & section:nth-child(3) {
         @include size(100vw, min-content);
         // background-color: #cfc;
-        overflow: hidden;
+        // overflow: hidden;
         margin-top: 10vh;
         & h2 {
           font-size: 1.5rem;
@@ -238,10 +238,11 @@ $fullhd-min-width : 1920px;
         & > div { //slideshow
           @include size(100%, 230px);
           position: relative;
+          // overflow: hidden;
 
           & ul {
             @include size(min-content, min-content);
-            @include flex(space-between, center, row);
+            @include flex(center, center, row);
             position: absolute;
             left: 0;
             & li {

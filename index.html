@@ -180,6 +180,7 @@
 
   //section-3 : member's story 
   //무한 슬라이드쇼 만들기
+  const slideShow = document.querySelector('#slideshow');
   const slides = document.querySelector( '#slides');
   const slideItems = document.querySelectorAll( '#slides li');
 
@@ -187,36 +188,43 @@
   slideCount = slideItems.length;
   slideWidth = 230; //슬라이드아이템 넓이
   slideMargin = 10; //슬라이드끼리 마진값
-  makeClone(); //처음아이템 복사함수
-  initfunction(); //슬라이드 넓이와 위치값 초기화 함수
-
+  makeClone(); // 복사함수
+  
   function makeClone() {
+    /*
+    ? 1번 li만 복사해서 붙였는데
+    ? ul 전체를 하나더 복사해서 붙이려고 합니다.
+    slideShow.appendChild(slides);
+    이건 안먹혀요! ㅠㅠ
+    */
+
+
     let cloneSlide = slideItems[0].cloneNode(true);
     slides.append(cloneSlide);
   }
-  function initfunction() { //ul의 넓이값 li한개값만큼 늘려주기
-    slides.style.width = (slideWidth + slideMargin) * (slideCount + 1) +'px';
-    // slides.style.left = - (slideWidth + slideMargin) + 'px';
-  }
+
   
   function move() {
     let current = 0;
     setInterval(function(){
       console.log(current);
-      slides.style.transition = '0.2s';
-      slides.style.left = (slideWidth + slideMargin) + 'px';
-      current++;
+      if(current <= slideCount) {
+        slides.style.transition = '1s';
+        slides.style.left = -((slideWidth + slideMargin) *(current))+ 'px';
+      }
+      
       if(current === slideCount) {
         setTimeout(function(){
           slides.style.transition = '0s';
           slides.style.left = 0;
-        },200)
-        current = 0;
+        },1000)
+        current = -1;
       }
-    },1000);
+      current += 1;
+    },1200);
   }
   //??ㅠㅠㅠㅠㅠㅠ
-  // move();
+  move();
 
 
 
