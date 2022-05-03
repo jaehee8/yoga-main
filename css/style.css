@@ -281,6 +281,7 @@ h2 {
   #container main section:nth-child(3) > div > ul > li > div > div:nth-child(1) {
     width: 8vh;
     height: 8vh;
+    border: 1px solid red;
     border-radius: 50%;
   }
   #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) {

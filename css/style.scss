@@ -259,7 +259,7 @@ $fullhd-min-width : 1920px;
                 // border: 1px solid blue;
                 & > div:nth-child(1) { //프로필사진
                   @include size(8vh, 8vh);
-                  // border: 1px solid red;
+                  border: 1px solid red;
                   border-radius: 50%;
                 }
                 & > div:nth-child(2) { 
