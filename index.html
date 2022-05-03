@@ -215,10 +215,13 @@
     slideShow.appendChild(slides);
     이건 안먹혀요! ㅠㅠ
     */
+    for(let i = 0; i < slideCount; i++) {
+      cloneSlide = slideItems[i].cloneNode(true);
+      slides.append(cloneSlide);
 
-
-    let cloneSlide = slideItems[0].cloneNode(true);
-    slides.append(cloneSlide);
+    }
+    // let cloneSlide = slideItems[0].cloneNode(true);
+    // slides.append(cloneSlide);
   }
 
   
@@ -242,7 +245,7 @@
     },2000);
   }
   
-  // move();
+  move();
 
 
 
