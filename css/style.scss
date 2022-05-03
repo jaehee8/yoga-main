@@ -255,15 +255,16 @@ $fullhd-min-width : 1920px;
               & > div { 
                 @include size(100%, min-content);
                 @include flex(space-between, center, row);
-                border: 1px solid blue;
+                margin-bottom: 1vh;
+                // border: 1px solid blue;
                 & > div:nth-child(1) { //프로필사진
                   @include size(8vh, 8vh);
-                  border: 1px solid red;
+                  // border: 1px solid red;
                   border-radius: 50%;
                 }
                 & > div:nth-child(2) { 
                   @include size(18vh, 8vh);
-                  border: 1px solid red;
+                  // border: 1px solid red;
                   & > span {
                     font-weight: bold;
                     color: $color-7;
@@ -281,6 +282,7 @@ $fullhd-min-width : 1920px;
               & > p {
                 color: $color-7;
                 text-align: justify;
+                font-size: .9rem;
               }
             }
           }
@@ -309,7 +311,7 @@ $fullhd-min-width : 1920px;
           & > ul {
             @include flex(space-between, center, row);
             @include size(16vh, 3vh);
-            & > li {
+            & > li { //아이콘
               @include size(3vh, 3vh);
               & > a {
                 @include size(100%, 100%);
@@ -674,6 +676,15 @@ main {
   & >li:nth-child(3) {
     & > a {
       @include img(url(../images/interview1.png));
+    }
+  }
+}
+#slides {
+  & > li:nth-child(1) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/1.png));
+      }
     }
   }
 }

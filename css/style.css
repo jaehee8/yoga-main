@@ -276,18 +276,16 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    border: 1px solid blue;
+    margin-bottom: 1vh;
   }
   #container main section:nth-child(3) > div > ul > li > div > div:nth-child(1) {
     width: 8vh;
     height: 8vh;
-    border: 1px solid red;
     border-radius: 50%;
   }
   #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) {
     width: 18vh;
     height: 8vh;
-    border: 1px solid red;
   }
   #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) > span {
     font-weight: bold;
@@ -311,6 +309,7 @@ h2 {
   #container main section:nth-child(3) > div > ul > li > p {
     color: #222;
     text-align: justify;
+    font-size: 0.9rem;
   }
   #container footer {
     width: 100vw;
@@ -787,6 +786,13 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
 }
 #interview > li:nth-child(3) > a {
   background-image: url(../images/interview1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#slides > li:nth-child(1) > div > div:nth-child(1) {
+  background-image: url(../images/1.png);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
