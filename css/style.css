@@ -241,7 +241,7 @@ h2 {
     height: 230px;
     position: relative;
   }
-  #container main section:nth-child(3) > div ul {
+  #container main section:nth-child(3) > div > ul {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
@@ -255,17 +255,67 @@ h2 {
     position: absolute;
     left: 0;
   }
-  #container main section:nth-child(3) > div ul li {
+  #container main section:nth-child(3) > div > ul > li {
     width: 230px;
     height: 230px;
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-left: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+  #container main section:nth-child(3) > div > ul > li > div {
+    width: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid blue;
+  }
+  #container main section:nth-child(3) > div > ul > li > div > div:nth-child(1) {
+    width: 8vh;
+    height: 8vh;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) {
+    width: 18vh;
+    height: 8vh;
+    border: 1px solid red;
+  }
+  #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) > span {
+    font-weight: bold;
+    color: #222;
+  }
+  #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1vh;
+  }
+  #container main section:nth-child(3) > div > ul > li > div > div:nth-child(2) > ul > li {
+    width: 3vh;
+    height: 3vh;
+    background-image: url(../images/icon/star.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #container main section:nth-child(3) > div > ul > li > p {
+    color: #222;
+    text-align: justify;
   }
   #container footer {
     width: 100vw;
     height: 30vh;
-    background-color: #ccc;
+    background-color: #D7BEB3;
     margin-top: 10vh;
     display: flex;
     justify-content: center;
@@ -281,16 +331,15 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
   #container footer > div > div:nth-child(1) {
-    width: 20vw;
+    width: 18vw;
     height: 8vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
-    border: 1px solid red;
   }
   #container footer > div > div:nth-child(1) > div {
     width: 17vh;
@@ -305,7 +354,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 12vh;
+    width: 16vh;
     height: 3vh;
   }
   #container footer > div > div:nth-child(1) > ul > li {
@@ -337,7 +386,10 @@ h2 {
   #container footer > div > div:nth-child(2) {
     width: 50vw;
     height: 15vh;
-    border: 1px solid red;
+  }
+  #container footer > div > div:nth-child(2) > span {
+    font-size: 0.8rem;
+    color: #fff;
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
@@ -557,13 +609,13 @@ h2 {
   #container footer {
     width: 100vw;
     height: 30vh;
-    background-color: #ddd;
-    margin-top: 10vh;
+    background-color: #D7BEB3;
+    margin-top: 3vh;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    padding-top: 3vh;
+    padding-top: 5vh;
   }
   #container footer > div {
     width: 90vw;
@@ -578,10 +630,9 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    border: 1px solid red;
   }
   #container footer > div > div:nth-child(1) > div {
-    width: 16vh;
+    width: 17vh;
     height: 3vh;
     background-image: url(../images/yoga-logo.png);
     background-position: 50% 50%;
@@ -593,7 +644,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 12vh;
+    width: 17vh;
     height: 3vh;
   }
   #container footer > div > div:nth-child(1) > ul > li {
@@ -625,7 +676,11 @@ h2 {
   #container footer > div > div:nth-child(2) {
     width: 100%;
     height: 15vh;
-    border: 1px solid red;
+    margin-top: 3vh;
+  }
+  #container footer > div > div:nth-child(2) > span {
+    font-size: 0.7rem;
+    color: #fff;
   }
 }
 main > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {

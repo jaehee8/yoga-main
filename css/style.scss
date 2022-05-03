@@ -229,7 +229,7 @@ $fullhd-min-width : 1920px;
         // background-color: #cfc;
         // overflow: hidden;
         margin-top: 10vh;
-        & h2 {
+        & h2 { //member's story
           font-size: 1.5rem;
           text-align: center;
           margin: 10vh 0;
@@ -240,16 +240,48 @@ $fullhd-min-width : 1920px;
           position: relative;
           // overflow: hidden;
 
-          & ul {
+          & > ul { //slides 
             @include size(min-content, min-content);
             @include flex(center, center, row);
             position: absolute;
             left: 0;
-            & li {
+            & > li { //리뷰
               @include size(230px, 230px);
               border: 1px solid #ddd;
               border-radius: 10px;
               margin-left: 10px;
+              padding: 10px;
+              @include flex(start, center, column);
+              & > div { 
+                @include size(100%, min-content);
+                @include flex(space-between, center, row);
+                border: 1px solid blue;
+                & > div:nth-child(1) { //프로필사진
+                  @include size(8vh, 8vh);
+                  border: 1px solid red;
+                  border-radius: 50%;
+                }
+                & > div:nth-child(2) { 
+                  @include size(18vh, 8vh);
+                  border: 1px solid red;
+                  & > span {
+                    font-weight: bold;
+                    color: $color-7;
+                  }
+                  & > ul {
+                    @include flex(space-between, center, row);
+                    margin-top: 1vh;
+                    & > li {
+                      @include size(3vh, 3vh);
+                      @include img(url(../images/icon/star.png));
+                    }
+                  }
+                }
+              }
+              & > p {
+                color: $color-7;
+                text-align: justify;
+              }
             }
           }
         }
@@ -258,24 +290,25 @@ $fullhd-min-width : 1920px;
     }
     & footer {
       @include size(100vw, 30vh);
-      background-color: #ccc;
+      background-color: #D7BEB3;
       margin-top: 10vh;
       @include flex(center, center, row);
       padding-top: 3vh;
       & > div {
         @include size(72vw, min-content);
-        @include flex(space-between, start, row);
+        @include flex(space-between, start, row-reverse);
+        // border: 1px solid blue;
         & > div:nth-child(1) {
-          @include size(20vw, 8vh);
-          @include flex(space-between, center, column);
-          border: 1px solid red;
+          @include size(18vw, 8vh);
+          @include flex(space-between, end, column);
+          // border: 1px solid red;
           & > div {
             @include size(17vh, 3vh);
             @include img(url(../images/yoga-logo.png));
           }
           & > ul {
             @include flex(space-between, center, row);
-            @include size(12vh, 3vh);
+            @include size(16vh, 3vh);
             & > li {
               @include size(3vh, 3vh);
               & > a {
@@ -301,8 +334,11 @@ $fullhd-min-width : 1920px;
         }
         & > div:nth-child(2) {
           @include size(50vw, 15vh);
-          border: 1px solid red;
-
+          // border: 1px solid red;
+          & > span {
+            font-size: .8rem;
+            color: $color-1;
+          }
         }
       }
     }
@@ -487,23 +523,23 @@ $fullhd-min-width : 1920px;
     }
     & footer {
       @include size(100vw, 30vh);
-      background-color: #ddd;
-      margin-top: 10vh;
+      background-color: #D7BEB3;
+      margin-top: 3vh;
       @include flex(start, center, column);
-      padding-top: 3vh;
+      padding-top: 5vh;
       & > div {
         @include size(90vw, min-content);
         & > div:nth-child(1) {
           @include size(100%, 5vh);
           @include flex(space-between, center, row);
-          border: 1px solid red;
+          // border: 1px solid red;
           & > div {
-            @include size(16vh, 3vh);
+            @include size(17vh, 3vh);
             @include img(url(../images/yoga-logo.png));
           }
           & > ul {
             @include flex(space-between, center, row);
-            @include size(12vh, 3vh);
+            @include size(17vh, 3vh);
             & > li {
               @include size(3vh, 3vh);
               & > a {
@@ -529,8 +565,12 @@ $fullhd-min-width : 1920px;
         }
         & > div:nth-child(2) {
           @include size(100%, 15vh);
-          border: 1px solid red;
-
+          margin-top: 3vh;
+          // border: 1px solid red;
+          & > span {
+            font-size: .7rem;
+            color: $color-1;
+          }
         }
       }
     }
