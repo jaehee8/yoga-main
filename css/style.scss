@@ -620,7 +620,7 @@ main {
 #slideshow { //slideshow
   @include size(100%, 230px);
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   & > ul { //slides 
     @include size(min-content, min-content);
     @include flex(center, center, row);
@@ -647,6 +647,7 @@ main {
           @include size(138px, 60px);
           // border: 1px solid red;
           & > span { //id
+            font-size: .9rem;
             font-weight: bold;
             color: $color-7;
           }
@@ -695,6 +696,20 @@ main {
     & > div {
       & > div:nth-child(1) {
         @include img(url(../images/4.png));
+      }
+    }
+  }
+  & > li:nth-child(5) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/5.png));
+      }
+    }
+  }
+  & > li:nth-child(6) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/6.png));
       }
     }
   }

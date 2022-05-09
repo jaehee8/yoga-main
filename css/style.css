@@ -701,7 +701,6 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   width: 100%;
   height: 230px;
   position: relative;
-  overflow: hidden;
 }
 #slideshow > ul {
   width: -webkit-min-content;
@@ -751,6 +750,7 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   height: 60px;
 }
 #slideshow > ul > li > div > div:nth-child(2) > span {
+  font-size: 0.9rem;
   font-weight: bold;
   color: #222;
 }
@@ -795,6 +795,18 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
 }
 #slides > li:nth-child(4) > div > div:nth-child(1) {
   background-image: url(../images/4.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#slides > li:nth-child(5) > div > div:nth-child(1) {
+  background-image: url(../images/5.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#slides > li:nth-child(6) > div > div:nth-child(1) {
+  background-image: url(../images/6.png);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
