@@ -235,59 +235,8 @@ $fullhd-min-width : 1920px;
           margin: 10vh 0;
           text-transform: uppercase;
         }
-        & > div { //slideshow
-          @include size(100%, 230px);
-          position: relative;
-          // overflow: hidden;
-
-          & > ul { //slides 
-            @include size(min-content, min-content);
-            @include flex(center, center, row);
-            position: absolute;
-            left: 0;
-            & > li { //리뷰
-              @include size(230px, 230px);
-              border: 1px solid #ddd;
-              border-radius: 10px;
-              margin-left: 10px;
-              padding: 10px;
-              @include flex(start, center, column);
-              & > div { 
-                @include size(100%, min-content);
-                @include flex(space-between, center, row);
-                margin-bottom: 1vh;
-                // border: 1px solid blue;
-                & > div:nth-child(1) { //프로필사진
-                  @include size(8vh, 8vh);
-                  border: 1px solid red;
-                  border-radius: 50%;
-                }
-                & > div:nth-child(2) { 
-                  @include size(18vh, 8vh);
-                  // border: 1px solid red;
-                  & > span {
-                    font-weight: bold;
-                    color: $color-7;
-                  }
-                  & > ul {
-                    @include flex(space-between, center, row);
-                    margin-top: 1vh;
-                    & > li {
-                      @include size(3vh, 3vh);
-                      @include img(url(../images/icon/star.png));
-                    }
-                  }
-                }
-              }
-              & > p {
-                color: $color-7;
-                text-align: justify;
-                font-size: .9rem;
-              }
-            }
-          }
-        }
-
+      // & > div { //slideshow
+      // }
       }
     }
     & footer {
@@ -506,20 +455,8 @@ $fullhd-min-width : 1920px;
           margin: 3vh 0;
           text-transform: uppercase;
         }
-        & > div { //slideshow
-          & ul {
-            @include size(min-content, min-content);
-            @include flex(space-between, center, row);
-            position: absolute;
-            left: 0;
-            & li {
-              @include size(230px, 230px);
-              border: 1px solid #ddd;
-              border-radius: 10px;
-              margin-left: 10px;
-            }
-          }
-        }
+        // & > div { //slideshow
+        // }
 
       }
     }
@@ -679,11 +616,85 @@ main {
     }
   }
 }
+/* ? 슬라이드쇼  pc mobile 구분없이 같은 디자인*/ 
+#slideshow { //slideshow
+  @include size(100%, 230px);
+  position: relative;
+  overflow: hidden;
+  & > ul { //slides 
+    @include size(min-content, min-content);
+    @include flex(center, center, row);
+    position: absolute;
+    left: 0;
+    & > li { //리뷰
+      @include size(230px, 230px);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-left: 10px;
+      padding: 10px;
+      @include flex(start, center, column);
+      & > div { 
+        @include size(100%, min-content);
+        @include flex(space-between, center, row);
+        margin-bottom: 1vh;
+        // border: 1px solid blue;
+        & > div:nth-child(1) { //프로필사진
+          @include size(60px, 60px);
+          border: 1px solid red;
+          border-radius: 50%;
+        }
+        & > div:nth-child(2) { 
+          @include size(138px, 60px);
+          // border: 1px solid red;
+          & > span { //id
+            font-weight: bold;
+            color: $color-7;
+          }
+          & > ul {
+            @include flex(space-between, center, row);
+            margin-top: 1vh;
+            & > li { //별점
+              @include size(20px, 20px);
+              @include img(url(../images/icon/star.png));
+            }
+          }
+        }
+      }
+      & > p {
+        color: $color-7;
+        text-align: justify;
+        font-size: .9rem;
+      }
+    }
+  }
+
+}
 #slides {
   & > li:nth-child(1) {
     & > div {
       & > div:nth-child(1) {
         @include img(url(../images/1.png));
+      }
+    }
+  }
+  & > li:nth-child(2) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/2.png));
+      }
+    }
+  }
+  & > li:nth-child(3) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/3.png));
+      }
+    }
+  }
+  & > li:nth-child(4) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/4.png));
       }
     }
   }

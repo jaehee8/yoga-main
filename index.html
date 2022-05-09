@@ -181,8 +181,54 @@
                 아요~
               </p>
             </li>
-            <li>3</li>
-            <li>4</li>
+            <li>
+              <div>
+                <!-- 프로필사진 -->
+                <div></div>
+                <div>
+                  <!-- 아이디 -->
+                  <span>나나95</span>
+                  <ul>
+                    <!-- 별 -->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                모닝 요가 덕분에 아침 루틴을 제대로 지
+                킬수있어 뿌듯합니다! 
+                강사님도 세세하게 코칭해 주시고 너무 좋
+                아요 다음에도 재수강할 거에요!
+              </p>
+            </li>
+            <li>
+              <div>
+                <!-- 프로필사진 -->
+                <div></div>
+                <div>
+                  <!-- 아이디 -->
+                  <span>jjamany</span>
+                  <ul>
+                    <!-- 별 -->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                은근 힘들어요. 어느정도 파워가 필요한
+                요가입니다. 하지만 온전히 나만의 시간
+                속에 내몸에 집중하고 오늘하루도 잘 해냈
+                다는 성취감을 느낄수 있었어요
+              </p>
+            </li>
             <li>5</li>
             <li>6</li>
             <li>7</li>
@@ -253,7 +299,7 @@
   //무한 슬라이드쇼 만들기
   const slideShow = document.querySelector('#slideshow');
   const slides = document.querySelector( '#slides');
-  const slideItems = document.querySelectorAll( '#slides li');
+  const slideItems = document.querySelectorAll( '#slides > li');
 
   
   slideCount = slideItems.length;
@@ -263,11 +309,9 @@
   
   function makeClone() {
     /*
-    ? 1번 li만 복사해서 붙였는데
-    ? ul 전체를 하나더 복사해서 붙이려고 합니다.
-    slideShow.appendChild(slides);
-    이건 안먹혀요! ㅠㅠ
+    ? ul 전체를 하나더 복사
     */
+    console.log(slideCount);
     for(let i = 0; i < slideCount; i++) {
       cloneSlide = slideItems[i].cloneNode(true);
       slides.append(cloneSlide);
