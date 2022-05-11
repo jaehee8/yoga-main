@@ -713,4 +713,19 @@ main {
       }
     }
   }
+  & > li:nth-child(7) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/7.png));
+      }
+    }
+  }
+  & > li:nth-child(8) {
+    & > div {
+      & > div:nth-child(1) {
+        @include img(url(../images/8.png));
+      }
+    }
+  }
+
 }

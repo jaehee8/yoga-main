@@ -810,4 +810,16 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#slides > li:nth-child(7) > div > div:nth-child(1) {
+  background-image: url(../images/7.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#slides > li:nth-child(8) > div > div:nth-child(1) {
+  background-image: url(../images/8.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
