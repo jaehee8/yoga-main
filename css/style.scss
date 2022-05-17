@@ -112,6 +112,7 @@ $fullhd-min-width : 1920px;
     }
     & main {
       @include flex(center, center, column);
+      //  -1-
       & section:nth-child(1) {
         @include size(100vw, 85vh);
         @include img(url(../images/bg.png));
@@ -182,6 +183,10 @@ $fullhd-min-width : 1920px;
                 @include size(6vh, 6vh);
                 border-radius: 50%;
                 background-color: #C196C1;
+                transition: .3s;
+              }
+              & > a:hover {
+                @include size(7vh, 7vh);
               }
               & > a::after {
                 content: '';
@@ -620,7 +625,7 @@ main {
 #slideshow { //slideshow
   @include size(100%, 230px);
   position: relative;
-  // overflow: hidden;
+  overflow: hidden;
   & > ul { //slides 
     @include size(min-content, min-content);
     @include flex(center, center, row);

@@ -184,6 +184,11 @@ h2 {
     height: 6vh;
     border-radius: 50%;
     background-color: #C196C1;
+    transition: 0.3s;
+  }
+  #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > a:hover {
+    width: 7vh;
+    height: 7vh;
   }
   #container main section:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > a::after {
     content: "";
@@ -701,6 +706,7 @@ main > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
   width: 100%;
   height: 230px;
   position: relative;
+  overflow: hidden;
 }
 #slideshow > ul {
   width: -webkit-min-content;
